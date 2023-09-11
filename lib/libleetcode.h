@@ -43,10 +43,11 @@ void print2DVector(vector<vector<T> > &matrix) {
   cout << endl;
 }
 
-void print2DVector(vector<vector<int>>& v);
 void printList(ListNode *head);
+void levelOrderTraversal(TreeNode *root);
 
 TreeNode* constructBinaryTree(vector<int>& arr);
 ListNode* constructList(vector<int>& arr);
+
 void check(bool val);
 #endif

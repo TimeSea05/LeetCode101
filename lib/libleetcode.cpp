@@ -6,8 +6,6 @@ using std::cout;
 using std::endl;
 using std::queue;
 
-
-
 void printList(ListNode *head) {
   ListNode *ptr = head;
   while (ptr != nullptr) {
@@ -65,6 +63,28 @@ TreeNode* constructBinaryTree(vector<int>& arr) {
   }
 
   return root;
+}
+
+void levelOrderTraversal(TreeNode *root) {
+  if (root == nullptr) {
+    return;
+  }
+
+  queue<TreeNode*> q;
+  q.push(root);
+
+  while (!q.empty()) {
+    TreeNode *node = q.front(); q.pop();
+    cout << node->val << " ";
+    if (node->left != nullptr) {
+      q.push(node->left);
+    }
+    if (node->right != nullptr) {
+      q.push(node->right);
+    }
+  }
+
+  cout << endl;
 }
 
 void check(bool val) {
